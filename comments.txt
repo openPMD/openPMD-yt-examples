@@ -1,21 +1,20 @@
-Anmerkungen an Forntend:
+Comments to the frontend:
 
+- postionOffset and weighting are ignored
+- only mass and charge ar interpreted as constants the others as arrays
 
--positioOffset und weighting funktioniert noch nicht
--es können nur mass und charge als konstanten geldaden werden, der
- Rest wird als array interpretiert
+- !!! in data_structures.py, class OpenPMDDataset, parse_parameter_file is the
+      size of the simulation box hard code and have to be changed for every file
 
-- !! in data_structures.py, class OpenPMDDataset, parse_parameter_file ist die 
-  Größe der Simulationsbox hardgecode und muss für jede Simulation angepasst werden
+Description of the scripts:
 
-Beschreibung Skripts:
+Convert_unitDimensions_to_YTUnit.py convert a openPMD unit array in a Unit
+string for YT
 
-Convert_unitDimensions_to_YTUnit.py konvertiert ein OpenPMD array mit Einheiten in einen
-Unit String den YT versteht
+Load_Particles_with_YT_loadParticles.py is a example to load particles with the
+yt.load_particles() function instead of yt.load()
 
-Load_Particles_with_YT_loadParticles.py liest Partikel über die Yt load_particles Funktion
-ein anstatt über yt.load()
+Simple_HDF5_Hierarchy_Reader.py shows the groups and attributes of a HDF5-file
+as a tree
 
-Simple_HDF5_Hierarchy_Reader.py stellt die Arrtibute und Gruppen von HDF5-Dateien als Baum da
-
-YT_Example_Plots.py sind Beispiele für  YT PLots mit OpenPMD
+YT_Example_Plots.py contains a lot of examples plots with YT 
